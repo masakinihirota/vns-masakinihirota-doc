@@ -21,6 +21,71 @@
 
 ---
 
+
+# GitHub Copilotを使うためのルール
+
+## 「#記号」
+#記号をつけると、ファイル名を指定できます。これにより、GitHub Copilot Chatに特定のファイルをコンテキストとして参照させることができます。
+
+例えば:
+- `#BasketService.cs` とすると、BasketService.csファイルの内容をCopilotに参照させられます
+- `#MyFile.cs: 66-72` とすると、MyFile.csファイルの66〜72行目を参照できます
+
+また、#記号はファイル名だけでなく、次のような要素も参照できます:
+- メソッド名：`#AddItemToBasket`（特定のメソッドを参照）
+- クラス名：`#BasketService`（特定のクラスを参照）
+- 関数名：`#CalculateTotal`（特定の関数を参照）
+
+これは「チャット変数」と呼ばれる機能の一部です。その他のチャット変数として以下のものがあります:
+- `#block`：現在のコードブロックを参照
+- `#class`：現在のクラスを参照
+- `#function`：現在の関数またはメソッドを参照
+- `#selection`：選択中のテキストを参照
+- `#file`：現在のファイルの内容を参照
+- `#line`：現在のコード行を参照
+- `#path`：ファイルパスを参照
+- `#project`：プロジェクトのコンテキストを参照
+[GitHub Docs](https://docs.github.com/ja/copilot/using-github-copilot/copilot-chat/github-copilot-chat-cheat-sheet)
+
+## 「@記号」
+@記号をつけると、特定の「チャット参加者」を指定できます。チャット参加者は、特定の専門知識を持つドメイン専門家のような役割を果たし、その分野に特化した支援を提供します。
+
+主なチャット参加者には以下のものがあります:
+- `@workspace`：ワークスペース（プロジェクト全体）のコードに関するコンテキストを持ち、プロジェクト構造や設計パターンの質問に適しています
+- `@github`：GitHub固有のCopilotスキルを活用できます
+- `@terminal`：ターミナルコマンドの作成やデバッグに関するヘルプを提供します
+- `@vscode`：Visual Studio Codeコマンドと機能に関するコンテキストを持ちます
+- `@azure`：Azureサービスに関するコンテキストを持ちます（プレビュー機能）
+[GitHub Docs](https://docs.github.com/ja/copilot/using-github-copilot/copilot-chat/github-copilot-chat-cheat-sheet)
+
+## その他の便利な機能
+
+### スラッシュコマンド
+`/`をつけると、特定のコマンドを実行できます。例えば:
+- `/explain`：コードの説明を取得
+- `/fix`：選択したコードの問題を修正
+- `/tests`：単体テストを生成
+- `/doc`：ドキュメントコメントを追加
+- `/optimize`：コードのパフォーマンスを最適化
+[GitHub Docs](https://docs.github.com/ja/copilot/using-github-copilot/copilot-chat/github-copilot-chat-cheat-sheet)
+
+### 使用例
+- `#MyFile.cs: 66-72の目的は何ですか?`（特定のファイルの特定行を参照）
+- `@workspace内に削除機能はありますか?`（ワークスペース全体を検索）
+- `#BasketService.csのテストはどこにありますか?`（特定のファイルに関連するテストを探す）
+- `/explain #AddItemToBasket`（特定のメソッドの説明を取得）
+
+これらの機能を使いこなすことで、GitHub Copilotとより効率的にコミュニケーションを取り、開発作業を効率化することができます。
+
+
+
+
+
+---
+
+
+
+
 # 全体像
 
 ## 全リポジトリ
