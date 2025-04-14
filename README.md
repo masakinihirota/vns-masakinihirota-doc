@@ -21,6 +21,21 @@
 
 ---
 
+# このWorkspaceでいちばん重要なルール
+
+このWorkspaceでは、vns-masakinihirota-docリポジトリに書かれていることが最優先されます。
+
+2番目が vns-masakinihirota-custom-instructionsリポジトリに書かれていることです。
+
+3番目が vns-masakinihirota-designリポジトリに書かれていることです。
+
+4番目が vns-masakinihirota-design-task-listリポジトリに書かれていることです。
+
+
+
+# Documentationのフレームワーク
+
+vitepressを使ってDocumentationを作成します。
 
 # GitHub Copilotを使うためのルール
 
