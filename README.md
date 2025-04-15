@@ -24,12 +24,8 @@
 # このWorkspaceでいちばん重要なルール
 
 このWorkspaceでは、vns-masakinihirota-docリポジトリに書かれていることが最優先されます。
-
 2番目が vns-masakinihirota-custom-instructionsリポジトリに書かれていることです。
-
 3番目が vns-masakinihirota-designリポジトリに書かれていることです。
-
-4番目が vns-masakinihirota-design-task-listリポジトリに書かれていることです。
 
 
 
@@ -108,7 +104,6 @@ vitepressを使ってDocumentationを作成します。
 コードを書く場所: vns-masakinihirotaリポジトリ
 指示書を書く場所: vns-masakinihirota-custom-instructionsリポジトリ
 設計書を書く場所: vns-masakinihirota-designリポジトリ
-タスクリストを書く場所: vns-masakinihirota-design-task-listリポジトリ
 ドキュメントを書く場所: vns-masakinihirota-docリポジトリ
 サンプルを書く場所: vns-masakinihirota-sampleリポジトリ
 
@@ -147,11 +142,6 @@ RECTANGLE "vns-masakinihirota-design" as design {
   仕様書
 }
 
-RECTANGLE "vns-masakinihirota-design-task-list" as tasklist {
-  タスクリスト
-  進行状況管理
-}
-
 RECTANGLE "vns-masakinihirota-custom-instructions" as instructions {
   GitHub Copilot指示書
   プロンプトファイル
@@ -168,12 +158,11 @@ RECTANGLE "vns-masakinihirota-doc" as doc {
   ユーザーガイド
 }
 
-design -down-> tasklist : 1. タスク分解
-tasklist -down-> instructions : 2. プロンプトファイル\n作成
-instructions -down-> webapp : 3. コード生成
-webapp --> webapp : 4. コードレビュー
-webapp -right-> doc : 5. ドキュメント\n生成
-webapp -left-> design : 6. フィードバック
+design -down-> instructions : 1. 指示書\nプロンプトファイル\n作成
+instructions -down-> webapp : 2. コード生成
+webapp --> webapp : 3. コードレビュー
+webapp -right-> doc : 4. ドキュメント\n生成
+webapp -left-> design : 5. フィードバック
 design -down-> doc : 情報提供
 
 note right of design : 人間の思考を文書化
@@ -231,19 +220,3 @@ VSCodeを開き、それぞれのリポジトリを登録します。
 ----------------------------------------
 
 # ドキュメントのREADME.md
-
-# 用語集
-
-- **コードリポジトリ**: Webアプリのコードを管理するリポジトリ。
-- **指示書リポジトリ**: GitHub Copilotの指示書を管理するリポジトリ。
-- **設計書リポジトリ**: プロジェクトの設計文書を管理するリポジトリ。
-- **タスクリストリポジトリ**: タスクの進捗や管理を行うリポジトリ。
-- **ドキュメントリポジトリ**: プロジェクトのドキュメントを管理するリポジトリ。
-- **サンプルリポジトリ**: サンプルコードや参考資料を管理するリポジトリ。
-- **Supabase**: 認証やデータベースを提供するバックエンドサービス。
-- **Drizzle ORM**: 型安全なPostgresデータベース操作のためのORM。
-- **Stripe**: 支払い処理とサブスクリプション管理のためのサービス。
-- **Tailwind CSS**: ユーティリティファーストのCSSフレームワーク。
-- **Vercel**: Next.jsアプリのデプロイプラットフォーム。
-
-
