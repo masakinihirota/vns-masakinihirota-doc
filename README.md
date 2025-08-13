@@ -2,8 +2,7 @@
 
 このプロジェクトは、`masakinihirota` Webアプリケーション開発のための大規模なWorkspaceの一部です。以下にWorkspaceの構成とその役割を示します：
 
-- **vns-masakinihirota**: コアアプリケーションコードを含むメインプロジェクトディレクトリ。
-- **vns-masakinihirota-custom-instructions**: コーディング、デザイン、ワークフローに関するカスタム指示書を格納。
+- **vns-masakinihirota**: コアアプリケーションコードを含むメインプロジェクトディレクトリ。コーディング、デザイン、ワークフローに関するカスタム指示書を格納。
 - **vns-masakinihirota-design**: アプリケーションの設計書、ワイヤーフレーム、UI/UXガイドラインを含むディレクトリ。
 - **vns-masakinihirota-doc**: 用語集、プロジェクト固有のガイドなどのドキュメントを格納。
 
@@ -14,8 +13,7 @@
 
 このプロジェクトは以下のリポジトリで構成されています:
 
-- **[vns-masakinihirota](https://github.com/masakinihirota/vns-masakinihirota)**: コアアプリケーションコードを含むメインリポジトリ。
-- **[vns-masakinihirota-custom-instructions](https://github.com/masakinihirota/vns-masakinihirota-custom-instructions)**: コーディングやデザインに関するカスタム指示書。
+- **[vns-masakinihirota](https://github.com/masakinihirota/vns-masakinihirota)**: コアアプリケーションコードを含むメインリポジトリ。コーディングやデザインに関するカスタム指示書。
 - **[vns-masakinihirota-design](https://github.com/masakinihirota/vns-masakinihirota-design)**: 設計書やUI/UXガイドライン。
 - **[vns-masakinihirota-doc](https://github.com/masakinihirota/vns-masakinihirota-doc)**: 用語集などのドキュメント。
 
@@ -97,8 +95,7 @@ vitepressを使ってDocumentationを作成します。
 
 ## 全リポジトリ
 
-コードを書く場所: vns-masakinihirotaリポジトリ
-指示書を書く場所: vns-masakinihirota-custom-instructionsリポジトリ
+コードや指示書を書く場所: vns-masakinihirotaリポジトリ
 設計書を書く場所: vns-masakinihirota-designリポジトリ
 ドキュメントを書く場所: vns-masakinihirota-docリポジトリ
 サンプルを書く場所: vns-masakinihirota-sampleリポジトリ
@@ -125,46 +122,8 @@ vitepressを使ってDocumentationを作成します。
 ## リポジトリ関連図
 
 ```plantuml
-@startuml
-!define RECTANGLE class
 
-skinparam componentStyle rectangle
-skinparam monochrome true
-skinparam shadowing false
-
-RECTANGLE "vns-masakinihirota-design" as design {
-  設計書
-  要件定義
-  仕様書
-}
-
-RECTANGLE "vns-masakinihirota-custom-instructions" as instructions {
-  GitHub Copilot指示書
-  プロンプトファイル
-}
-
-RECTANGLE "vns-masakinihirota" as webapp {
-  Webアプリケーションコード
-  実装
-  テスト
-}
-
-RECTANGLE "vns-masakinihirota-doc" as doc {
-  公開ドキュメント
-  ユーザーガイド
-}
-
-design -down-> instructions : 1. 指示書\nプロンプトファイル\n作成
-instructions -down-> webapp : 2. コード生成
-webapp --> webapp : 3. コードレビュー
-webapp -right-> doc : 4. ドキュメント\n生成
-webapp -left-> design : 5. フィードバック
-design -down-> doc : 情報提供
-
-note right of design : 人間の思考を文書化
-note left of webapp : GitHub Copilotが\n生成したコード
-note left of instructions : GitHub Copilotへの\n指示内容
-@enduml
+。。。
 
 ```
 
