@@ -1,177 +1,41 @@
-## Workspace Structure
+# vns-masakinihirota-doc
 
-このプロジェクトは、`masakinihirota` Webアプリケーション開発のための大規模なWorkspaceの一部です。以下にWorkspaceの構成とその役割を示します：
+## 概要
+`vns-masakinihirota-doc` は、価値観共有プラットフォーム **masakinihirota** のユーザー向けドキュメントを管理するリポジトリです。
 
-- **vns-masakinihirota**: コアアプリケーションコードを含むメインプロジェクトディレクトリ。コーディング、デザイン、ワークフローに関するカスタム指示書を格納。
-- **vns-masakinihirota-design**: アプリケーションの設計書、ワイヤーフレーム、UI/UXガイドラインを含むディレクトリ。
-- **vns-masakinihirota-doc**: 用語集、プロジェクト固有のガイドなどのドキュメントを格納。
+**masakinihirota** は、従来のSNSとは異なり、価値観を基にしたつながりを重視するVNS（Value Network Service）として設計されています。オアシス宣言・人間宣言の理念のもと、安心で安全なオンライン空間を提供します。
 
+## 役割分担
+- **設計書・要件定義**: [`vns-masakinihirota-design`](../vns-masakinihirota-design) で管理
+- **コード実装**: [`vns-masakinihirota`](../vns-masakinihirota) で実装
+- **ユーザー向けドキュメント**: このリポジトリで管理
 
-各ディレクトリは、構造化された効率的な開発プロセスを確保するために重要な役割を果たしています。詳細な情報やリソースについては、それぞれのディレクトリを参照してください。
+## ドキュメント一覧
 
-## Related Repositories
+### 📖 ユーザーガイド
+- [はじめに](./docs/user-guide/getting-started.md) - サイトの概要と基本的な使い方
+- [アカウント作成・ログイン](./docs/user-guide/account.md) - 認証と初期設定
+- [プロフィール管理](./docs/user-guide/profile.md) - 千の仮面システムとプロフィール設定
+- [作品登録・評価](./docs/user-guide/works.md) - 作品の登録と絶対相対評価システム
+- [マッチング機能](./docs/user-guide/matching.md) - 価値観に基づくマッチング
+- [リスト機能](./docs/user-guide/lists.md) - 公式リストとユーザーリストの活用
+- [タグ機能](./docs/user-guide/tags.md) - 公式タグとユーザータグの使い方
 
-このプロジェクトは以下のリポジトリで構成されています:
+### 🔧 APIリファレンス
+- [API概要](./docs/api/overview.md) - APIの基本情報
+- [認証](./docs/api/authentication.md) - API認証方法
+- [エンドポイント一覧](./docs/api/endpoints.md) - 利用可能なAPIエンドポイント
 
-- **[vns-masakinihirota](https://github.com/masakinihirota/vns-masakinihirota)**: コアアプリケーションコードを含むメインリポジトリ。コーディングやデザインに関するカスタム指示書。
-- **[vns-masakinihirota-design](https://github.com/masakinihirota/vns-masakinihirota-design)**: 設計書やUI/UXガイドライン。
-- **[vns-masakinihirota-doc](https://github.com/masakinihirota/vns-masakinihirota-doc)**: 用語集などのドキュメント。
+### 📚 用語集・FAQ
+- [用語集](./用語.md) - プロジェクト固有の用語説明
+- [FAQ](./docs/faq.md) - よくある質問
 
----
+## プロジェクトの特徴
+- **VNS（Value Network Service）**: 価値観によるつながりを重視
+- **オアシス宣言**: 安心・安全なオンライン空間の提供
+- **人間宣言**: 人間らしさと寛容さを大切にする
+- **千の仮面システム**: 複数のペルソナを管理可能
+- **絶対相対評価**: 客観的で公正な作品評価システム
 
-このリポジトリの使い方
-
-開発に必要なリポジトリを揃えます。
-
-# Documentationのフレームワーク
-
-vitepressを使ってDocumentationを作成します。
-
-# GitHub Copilotを使うためのルール
-
-## 「#記号」
-#記号をつけると、ファイル名を指定できます。これにより、GitHub Copilot Chatに特定のファイルをコンテキストとして参照させることができます。
-
-例えば:
-- `#BasketService.cs` とすると、BasketService.csファイルの内容をCopilotに参照させられます
-- `#MyFile.cs: 66-72` とすると、MyFile.csファイルの66〜72行目を参照できます
-
-また、#記号はファイル名だけでなく、次のような要素も参照できます:
-- メソッド名：`#AddItemToBasket`（特定のメソッドを参照）
-- クラス名：`#BasketService`（特定のクラスを参照）
-- 関数名：`#CalculateTotal`（特定の関数を参照）
-
-これは「チャット変数」と呼ばれる機能の一部です。その他のチャット変数として以下のものがあります:
-- `#block`：現在のコードブロックを参照
-- `#class`：現在のクラスを参照
-- `#function`：現在の関数またはメソッドを参照
-- `#selection`：選択中のテキストを参照
-- `#file`：現在のファイルの内容を参照
-- `#line`：現在のコード行を参照
-- `#path`：ファイルパスを参照
-- `#project`：プロジェクトのコンテキストを参照
-[GitHub Docs](https://docs.github.com/ja/copilot/using-github-copilot/copilot-chat/github-copilot-chat-cheat-sheet)
-
-## 「@記号」
-@記号をつけると、特定の「チャット参加者」を指定できます。チャット参加者は、特定の専門知識を持つドメイン専門家のような役割を果たし、その分野に特化した支援を提供します。
-
-主なチャット参加者には以下のものがあります:
-- `@workspace`：ワークスペース（プロジェクト全体）のコードに関するコンテキストを持ち、プロジェクト構造や設計パターンの質問に適しています
-- `@github`：GitHub固有のCopilotスキルを活用できます
-- `@terminal`：ターミナルコマンドの作成やデバッグに関するヘルプを提供します
-- `@vscode`：Visual Studio Codeコマンドと機能に関するコンテキストを持ちます
-- `@azure`：Azureサービスに関するコンテキストを持ちます（プレビュー機能）
-[GitHub Docs](https://docs.github.com/ja/copilot/using-github-copilot/copilot-chat/github-copilot-chat-cheat-sheet)
-
-## その他の便利な機能
-
-### スラッシュコマンド
-`/`をつけると、特定のコマンドを実行できます。例えば:
-- `/explain`：コードの説明を取得
-- `/fix`：選択したコードの問題を修正
-- `/tests`：単体テストを生成
-- `/doc`：ドキュメントコメントを追加
-- `/optimize`：コードのパフォーマンスを最適化
-[GitHub Docs](https://docs.github.com/ja/copilot/using-github-copilot/copilot-chat/github-copilot-chat-cheat-sheet)
-
-### 使用例
-- `#MyFile.cs: 66-72の目的は何ですか?`（特定のファイルの特定行を参照）
-- `@workspace内に削除機能はありますか?`（ワークスペース全体を検索）
-- `#BasketService.csのテストはどこにありますか?`（特定のファイルに関連するテストを探す）
-- `/explain #AddItemToBasket`（特定のメソッドの説明を取得）
-
-これらの機能を使いこなすことで、GitHub Copilotとより効率的にコミュニケーションを取り、開発作業を効率化することができます。
-
-
-
-
-
----
-
-
-
-
-# 全体像
-
-## 全リポジトリ
-
-コードや指示書を書く場所: vns-masakinihirotaリポジトリ
-設計書を書く場所: vns-masakinihirota-designリポジトリ
-ドキュメントを書く場所: vns-masakinihirota-docリポジトリ
-サンプルを書く場所: vns-masakinihirota-sampleリポジトリ
-
-複数のリポジトリを用意して、VSCodeのワークスペース機能を使って、1つのWebアプリ開発プロジェクトとします。
-以下プロジェクトと呼びます。
-
-このREADME.mdファイルについて
-* このプロジェクト全体のREADME.mdファイル
-* ドキュメントのREADME.mdファイル
-を兼ねています。
-
-# プロジェクト全体のREADME.md
-
-※このプロジェクトの開始場所
-プロジェクト名 masakinihirota
-
-# masakinihirotaプロジェクト全体のルール
-
-ルール1 ※最優先ルール
-ドキュメントにかかれていることが最優先されます。
-`vns-masakinihirota-doc`リポジトリの`README.md`に書かれていることが最優先されます。
-
-## リポジトリ関連図
-
-```plantuml
-
-。。。
-
-```
-
-この図は各リポジトリ間の関係と情報の流れを示しています。設計書から始まり、タスク分解、プロンプトファイル作成、コード生成という流れと、フィードバックループやドキュメント生成の関係を表現しています。
-
-# 全リポジトリの管理
-
-VSCodeのワークスペース機能を使って複数のリポジトリをまとめて管理します。
-
-※GitHub Copilotはワークスペース内のファイルを見ています。
-
-## ワークスペースの設定
-
-VSCodeを開き、それぞれのリポジトリを登録します。
-
-## 複数リポジトリをVSCodeのワークスペースで利用する方法
-
-### ワークスペースの作成手順
-1. **VS Codeを起動**し、「ファイル」→「ワークスペースをフォルダーに追加...」を選択。
-2. 指示書リポジトリとコードリポジトリを追加。
-3. 「ワークスペースを名前を付けて保存...」でワークスペースファイルを保存（例: `my-project.code-workspace`）。
-4. ワークスペースを開き、GitHub Copilotに指示書を読ませてコード生成を指示。
-
-👇ワークスペース設定のファイルに登録できています。
-
-```[ワークスペース名].code-workspace
-{
-	"folders": [
-		{
-			"path": "リポジトリ名1"
-		},
-		{
-			"path": "リポジトリ名2"
-		}
-	],
-	"settings": {
-		// ワークスペース専用の設定を書けます。
-	}
-}
-
-```
-
-ワークスペースの設定ファイルを
-ワークスペースに登録したリポジトリのルートに置きます。
-
-作成されたワークスペースファイルは、リポジトリのルートに保存されます。
-`_vns-masakinihirota.code-workspace`
-
-----------------------------------------
-
-# ドキュメントのREADME.md
+## 貢献
+ドキュメント更新時は、関連リポジトリの変更も確認してください。Serena MCPでプロジェクト状況をチェックし、一貫性を保ちましょう。
