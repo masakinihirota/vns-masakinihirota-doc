@@ -1,0 +1,13 @@
+{
+  "name": "vns-slide-generator",
+  "version": "1.0.0",
+  "description": "VNS masakinihirota スライド画像生成",
+  "main": "render_slides.js",
+  "scripts": {
+    "start": "node render_slides.js",
+    "install-puppeteer": "npm install puppeteer"
+  },
+  "dependencies": {
+    "puppeteer": "^21.11.0"
+  }
+}

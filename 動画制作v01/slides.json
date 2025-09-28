@@ -1,0 +1,86 @@
+[
+  {
+    "id": "slide01",
+    "title": "VNS masakinihirota",
+    "subtitle": "価値観でつながる新しいネットワークサービス",
+    "body": "<h3>MVP版要件定義書の紹介</h3>",
+    "duration": 12
+  },
+  {
+    "id": "slide02",
+    "title": "VNSとは？",
+    "subtitle": "Value Network Service",
+    "body": "\n            <ul>\n                <li>個人情報に依存しないマッチング</li>\n                <li>作品・価値観ベースでの安全な繋がり</li>\n                <li>オアシス宣言準拠の安心・安全な場</li>\n                <li>最小限の登録で価値検証を実現</li>\n            </ul>\n            ",
+    "duration": 25
+  },
+  {
+    "id": "slide03",
+    "title": "SNS vs VNS",
+    "subtitle": "異なるアプローチ",
+    "body": "\n            <div class=\"comparison\">\n                <div>\n                    <h3>SNS</h3>\n                    <ul>\n                        <li>社会的つながり重視</li>\n                        <li>表現の自由重視</li>\n                    </ul>\n                </div>\n                <div>\n                    <h3>VNS</h3>\n                    <ul>\n                        <li>価値観でのつながり</li>\n                        <li>安全性重視</li>\n                        <li>建設的な議論</li>\n                        <li>ボトムアップ運営</li>\n                    </ul>\n                </div>\n            </div>\n            ",
+    "duration": 25
+  },
+  {
+    "id": "slide04",
+    "title": "非認証体験機能",
+    "subtitle": "登録前の体験",
+    "body": "\n            <ul>\n                <li>ダミープロフィールの閲覧</li>\n                <li>ダミーデータでマッチング体験</li>\n                <li>作品・価値観サンプル閲覧</li>\n                <li>保存・編集は不可（体験のみ）</li>\n            </ul>\n            ",
+    "duration": 20
+  },
+  {
+    "id": "slide05",
+    "title": "認証・初期設定",
+    "subtitle": "Supabase Auth対応",
+    "body": "\n            <ul>\n                <li>Google・GitHub認証</li>\n                <li>居住地域（地球3分割）</li>\n                <li>母語・UI言語設定</li>\n                <li>生誕世代設定</li>\n                <li>オアシス宣誓（必須）</li>\n                <li>広告ON/OFF選択</li>\n            </ul>\n            ",
+    "duration": 25
+  },
+  {
+    "id": "slide06",
+    "title": "ルートアカウント機能",
+    "subtitle": "1ユーザー = 1ルート",
+    "body": "\n            <ul>\n                <li>ポイント表示（次版で消費ロジック）</li>\n                <li>経過日数の管理</li>\n                <li>全データリセット機能</li>\n                <li>複数プロフィールの管理</li>\n                <li>信頼度の自動算出</li>\n            </ul>\n            ",
+    "duration": 20
+  },
+  {
+    "id": "slide07",
+    "title": "ユーザープロフィール",
+    "subtitle": "目的別の多面的アプローチ",
+    "body": "\n            <ul>\n                <li>複数作成可能（上限4）</li>\n                <li>仕事・友人・婚活・終活・その他</li>\n                <li>表示形式：名刺・履歴書・フル</li>\n                <li>自動グループ生成（リーダー権限付き）</li>\n            </ul>\n            ",
+    "duration": 25
+  },
+  {
+    "id": "slide08",
+    "title": "登録機能",
+    "subtitle": "作品・価値観の管理",
+    "body": "\n            <div class=\"tech-grid\">\n                <div class=\"tech-item\">\n                    <h3>作品登録</h3>\n                    <ul>\n                        <li>公式約100件</li>\n                        <li>ユーザー追加登録</li>\n                        <li>アニメ・マンガ対応</li>\n                    </ul>\n                </div>\n                <div class=\"tech-item\">\n                    <h3>価値観登録</h3>\n                    <ul>\n                        <li>設問・選択肢モデル</li>\n                        <li>重要度フラグ</li>\n                        <li>カテゴリ別管理</li>\n                    </ul>\n                </div>\n            </div>\n            ",
+    "duration": 20
+  },
+  {
+    "id": "slide09",
+    "title": "マッチング機能",
+    "subtitle": "高精度スコア算出システム",
+    "body": "\n            <ul>\n                <li>0-100点スコア算出</li>\n                <li>ランク表示：High / Medium / Low / Very Low</li>\n                <li>自動マッチング（75点以上、最大5人）</li>\n                <li>作品Tier一致度・価値観一致度</li>\n                <li>重要フラグによる加点システム</li>\n            </ul>\n            ",
+    "duration": 30
+  },
+  {
+    "id": "slide10",
+    "title": "UI・国際化機能",
+    "subtitle": "ユーザビリティ重視",
+    "body": "\n            <div class=\"tech-grid\">\n                <div class=\"tech-item\">\n                    <h3>グループ関連</h3>\n                    <ul>\n                        <li>オアシス宣言自動適用</li>\n                        <li>関係語彙管理</li>\n                    </ul>\n                </div>\n                <div class=\"tech-item\">\n                    <h3>UI対応</h3>\n                    <ul>\n                        <li>日本語・英語対応</li>\n                        <li>レスポンシブデザイン</li>\n                        <li>ダークモード対応</li>\n                    </ul>\n                </div>\n            </div>\n            ",
+    "duration": 20
+  },
+  {
+    "id": "slide11",
+    "title": "技術仕様",
+    "subtitle": "セキュリティ・パフォーマンス重視",
+    "body": "\n            <div class=\"tech-grid\">\n                <div class=\"tech-item\">\n                    <h3>データモデル</h3>\n                    <ul>\n                        <li>ルートアカウント・プロフィール</li>\n                        <li>作品・価値観の関係管理</li>\n                        <li>RLS セキュリティ制御</li>\n                    </ul>\n                </div>\n                <div class=\"tech-item\">\n                    <h3>非機能要件</h3>\n                    <ul>\n                        <li>P90応答時間 200ms以内</li>\n                        <li>OAuth・XSS対策</li>\n                        <li>99.9%可用性目標</li>\n                    </ul>\n                </div>\n            </div>\n            ",
+    "duration": 30
+  },
+  {
+    "id": "slide12",
+    "title": "受入基準・今後の展望",
+    "subtitle": "MVP完成目標",
+    "body": "\n            <ul>\n                <li><span class=\"checkmark\">✓</span>非認証ダミー体験</li>\n                <li><span class=\"checkmark\">✓</span>OAuth認証・初期設定</li>\n                <li><span class=\"checkmark\">✓</span>プロフィール・作品・価値観登録</li>\n                <li><span class=\"checkmark\">✓</span>マッチング機能</li>\n                <li><span class=\"checkmark\">✓</span>安全なリセット機能</li>\n            </ul>\n            <h3 style=\"margin-top: 40px; color: #FFE066;\">次フェーズ: 高度なグループ運営・課金機能</h3>\n            ",
+    "duration": 15
+  }
+]
